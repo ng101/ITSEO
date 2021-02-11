@@ -6,9 +6,9 @@ Should be running on IIS Express - http://localhost:62077/
 Navigate to folder repos\InfoTrack\InfoTrack.UI
 Open cmd. Enter command 'npm install'. Enter command 'npm start'.
 
-Ensure baseUrl in InfoTrackClient.js client is http://localhost:62077.
+Ensure baseUrl in InfoTrackClient.js client is http://localhost:62077 if error connecting to API.
 
-
+Search data is already prepopulated but you are able to change search provider between bing/google.
 
 ## TECH
 * .NET Core 3.1
