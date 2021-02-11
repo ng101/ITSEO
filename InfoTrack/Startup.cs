@@ -17,18 +17,25 @@ namespace InfoTrack
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
 
             services.AddApplication();
             services.AddInfrastructure();
 
-            services.AddControllers().AddNewtonsoftJson();             
-            
+            services.AddControllers().AddNewtonsoftJson();
+         
+
             services.AddSwaggerGen(setup => setup.SwaggerDoc("InfoTrack", new Microsoft.OpenApi.Models.OpenApiInfo
             {
                 Title = "InfoTrack",
@@ -48,6 +55,8 @@ namespace InfoTrack
 
             app.UseRouting();
 
+            app.UseCors("CorsPolicy");
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -55,8 +64,10 @@ namespace InfoTrack
                 endpoints.MapControllers();
             });
 
+
             app.UseSwagger();
-            app.UseSwaggerUI(setup => {
+            app.UseSwaggerUI(setup =>
+            {
                 setup.SwaggerEndpoint("/swagger/InfoTrack/swagger.json", "InfoTrack");
                 setup.RoutePrefix = "";
 
