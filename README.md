@@ -1,7 +1,12 @@
 # InfoTrack
-# MMT
 ## TO RUN
+Open the InfoTrack sln, build and run. 
+Should be running on IIS Express - http://localhost:62077/
 
+Navigate to folder repos\InfoTrack\InfoTrack.UI
+Open cmd. Enter command 'npm install'. Enter command 'npm start'.
+
+Ensure baseUrl in InfoTrackClient.js client is http://localhost:62077.
 
 ## TECH
 * .NET Core 3.1
