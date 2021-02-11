@@ -12,9 +12,11 @@ Ensure baseUrl in InfoTrackClient.js client is http://localhost:62077.
 
 ## TECH
 * .NET Core 3.1
+* Node 6.17.1
 * MediatR
 * XUnit
 * Moq
+
 
 ## ARCHITECTURE
 CQRS with onion architecture
