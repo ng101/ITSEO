@@ -38,6 +38,7 @@ The project is based on onion architecture - Inner layers of the below diagram s
 
 
 ### TODO
+- Saving search rankings would have been implemented by a new command within the Application layer to save the results in a DB. A new query can then be created in this layer to get these figures and analyse accordingly. 
 - Health checks: Search Apis
 - Integration Tests.
 - Logging
