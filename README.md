@@ -38,11 +38,9 @@ The project is based on onion architecture - Inner layers of the below diagram s
 
 
 ### TODO
-Before deploying live I suggest:
 - Health checks: Search Apis
 - Integration Tests.
 - Logging
-- Load/Stress Tests.
 - Move urls to config.
-- Sanatize Urls
+- Sanatize Urls inputted by User
 
