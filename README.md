@@ -8,6 +8,8 @@ Open cmd. Enter command 'npm install'. Enter command 'npm start'.
 
 Ensure baseUrl in InfoTrackClient.js client is http://localhost:62077.
 
+
+
 ## TECH
 * .NET Core 3.1
 * MediatR
@@ -33,3 +35,14 @@ Contains controllers and middleware setup.
 The project is based on onion architecture - Inner layers of the below diagram should not reference outer layers.
 
 ![projects_dependencies](docs/clean_architecture.jpg)
+
+
+### TODO
+Before deploying live I suggest:
+- Health checks: Search Apis
+- Integration Tests.
+- Logging
+- Load/Stress Tests.
+- Move urls to config.
+- Sanatize Urls
+
