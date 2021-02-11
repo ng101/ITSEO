@@ -27,4 +27,4 @@ Contains controllers and middleware setup.
 ### Dependencies 
 The project is based on onion architecture - Inner layers of the below diagram should not reference outer layers.
 
-![projects_dependencies](InfoTrack/docs/clean_architecture.jpg)
+![projects_dependencies](docs/clean_architecture.jpg)
